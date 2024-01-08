@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../hbdxu/hbdxu.png" type="image/x-icon">
+	<title>hbdxu</title>
+	<style>
+		
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#hb-404 {
+			width: 100%;
+			min-width: 600px;
+			font-size: 20px;
+		}
+
+		.hb-404-top {
+			width: 600px;
+			height: 400px;
+			margin: 0 auto;
+		}
+
+		.hb-404-top img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.hb-404-bottom {
+			width: 100%;
+			min-height: 100px;
+			text-align: center;
+			line-height: 40px;
+		}
+		.hb-404-bottom a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="hb-404">
+		<div class="hb-404-top">
+			<img src="../images/hb-404.png" alt="404页面">
+		</div>
+		<div class="hb-404-bottom">
+			<div>倒计时<span id="second">10</span>秒</div>
+			<a href="../index.html" style="color: #a5f87f;">hbdxu</a>
+			<a onclick="javascript:history.back(-1);" style="color: #14911c;">返回上一步</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var secs = 10;
+		for (var i = secs; i >= 0; i--) {
+			window.setTimeout("doUpdate(" + i + ")", (secs - i) * 1000);
+		}
+
+		function doUpdate(num) {
+			document.getElementById("second").innerHTML = num;
+			if (num == 0) window.location = '../index.html';
+		}
+	</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,196 @@
+#hb-zero {
+    width: auto;
+    min-height: 744px;
+}
+
+#hb-box {
+    width: 1600px;
+    height: 540px;
+    margin: 0 auto;
+}
+
+#character {
+    height: 200px;
+    width: 200px;
+    float: right;
+    margin-top: -200px;
+    padding: 0;
+}
+
+#character img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#character ul li,
+#character ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    height: 540px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .imgs {
+    overflow: hidden;
+}
+
+.banner .imgs img {
+    width: 1600px;
+    height: 540px;
+    display: block;
+    object-fit: cover;
+}
+
+.banner .imgs a {
+    float: left;
+}
+
+/* .banner .dots {
+    position: absolute;
+    background: rgba(255, 255, 255, .3);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 12px;
+    padding: 2px 4px;
+    border-radius: 8px;
+} */
+
+/* .banner .dots span {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+} */
+
+/* .banner .dots span.active {
+    background: #14911c;
+} */
+
+/* .banner:hover .arrow {
+    display: block;
+} */
+
+/* .banner .arrow {
+    display: none;
+} */
+
+/*
+.banner .arrow .item {
+    position: absolute;
+    top: 218px;
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+    height: 78px;
+    width: 80px;
+    line-height: 30px;
+    cursor: pointer;
+} */
+
+/* .banner .arrow .item:hover {
+    background: rgba(0, 0, 0, .5);
+} */
+
+/* .banner .arrow .left {
+    left: 0;
+    border-radius: 0 17px 17px 0;
+} */
+
+/* .banner .arrow .right {
+    right: 0;
+    border-radius: 17px 0 0 17px;
+    padding-left: 7px;
+    box-sizing: border-box;
+} */
+
+
+#hb-reward {
+    width: 1600px;
+    height: 204px;
+    margin: 0 auto;
+    color: white;
+}
+
+#reward {
+    width: 1584px;
+    height: 177px;
+    margin: 0 auto;
+                                          
+}
+
+#reward .reward-color{
+    color: #14911c;
+}
+#reward div {
+    margin: 0;
+    padding: 0;
+    width: 396px;
+    float: left;
+    cursor: pointer;
+    
+}
+#reward>div{
+    box-shadow: 3px 5px 12px #2b2a2a
+}
+
+#reward .excitation1 {
+    height: 176px;
+    background: #48a7d4;
+    
+}
+
+#reward .excitation2 {
+    height: 190px;
+    background: #fdc735;
+}
+
+#reward .excitation3 {
+    height: 176px;
+    background: #48a7d4;
+}
+
+#reward .excitation4 {
+    height: 176px;
+    background: #10c45c;
+}
+
+#reward .reward-left {
+    width: 100px;
+    height: 186px;
+}
+
+#reward .reward-left img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#reward .reward-left span {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+#reward .reward-right {
+    width: 256px;
+    height: 146px;
+    padding-top: 20px;
+}
+
+#reward .reward-right span {
+    line-height: 41px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 5px;
+} 
