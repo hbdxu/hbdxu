@@ -1,0 +1,79 @@
+#hb-zero {
+    width: auto;
+    min-height: 204px;
+}
+
+#reward {
+    width: 1584px;
+    height: 177px;
+    margin: 0 auto;
+    color: white;
+                                          
+}
+
+#reward .reward-color{
+    color: #14911c;
+}
+#reward div {
+    margin: 0;
+    padding: 0;
+    width: 396px;
+    float: left;
+    cursor: pointer;
+    
+}
+#reward>div{
+    box-shadow: 3px 5px 12px #2b2a2a
+}
+
+#reward .excitation1 {
+    height: 176px;
+    background: #48a7d4;
+    
+}
+
+#reward .excitation2 {
+    height: 190px;
+    background: #fdc735;
+}
+
+#reward .excitation3 {
+    height: 176px;
+    background: #48a7d4;
+}
+
+#reward .excitation4 {
+    height: 176px;
+    background: #10c45c;
+}
+
+#reward .reward-left {
+    width: 100px;
+    height: 186px;
+}
+
+#reward .reward-left img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#reward .reward-left span {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+#reward .reward-right {
+    width: 256px;
+    height: 146px;
+    padding-top: 20px;
+}
+
+#reward .reward-right span {
+    line-height: 41px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 5px;
+} 
