@@ -7,321 +7,112 @@
 <head>
     <meta charset="UTF-8">
     <title>hbdxu</title>
+    <meta charset="UTF-8">
     <meta name="keywords" content="hbdxu">
-    <meta name="description" content="hbdxu致力于思考和想象的高等生命体">
+    <meta name="description" content="hbdxu致力于思考和想象的高等生命体,hbdxu是地球上的二代人类">
+    <meta name="author" content="dylan">
     <link rel="shortcut icon" href="./hbdxu/hbdxu.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/hbdxu.css">
-    <link rel="stylesheet" href="./css/hb-header.css">
-    <link rel="stylesheet" href="./css/hb-zero.css">
-    <link rel="stylesheet" href="./css/hb-three.css">
-    <link rel="stylesheet" href="./css/hb-footer.css">
+    <!-- 配色：单色 -->
+    <!-- 配色：#a5f87f 浅; #14911c 深-->
+    <style>
+        * {
+            padding: 0;
+            font-family: 'SimSun';
+            list-style-type: none;
+            margin: 0;
+        }
+
+        /* 设定最小尺寸是300*300 可以按需求调节尺寸 */
+        #hbdxu {
+            width: 300px;
+            height: 300px;
+            background-image: url(./images/hb-logo.png);
+            background-size: 100% 100%;
+            margin: 0 auto;
+        }
+
+        .picture {
+            margin-top: 150px;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+
+        .picture>img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+
+        }
+
+        body>#characters {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .evolution>button {
+            background: black;
+            color: #a5f87f;
+        }
+    </style>
 </head>
 <!-- 文档体 -->
 
 <body>
     <!-- 欢迎来到hbdxu -->
     <div id="hbdxu">
+        <div class="picture">
 
-        <!-- 配色：单色 -->
-        <!-- 配色：#a5f87f 浅; #14911c 深-->
-
-        <!-- 头部 参考值：1600*103； -->
-        <div id="hb-header">
-            <!-- 顶部 参考值：1600*51；-->
-            <div id="hb-top">
-                <div id="hb-top-main">
-                    <!-- 电话 -->
-                    <div class="hb-phone">
-                        <img src="./images/hb-phonecall.png" alt="官方电话">
-                        <span>185 9794 9651</span>
-                    </div>
-
-                    <!-- 邮箱 -->
-                    <div class="hb-email">
-                        <img src="./images/hb-email.png" alt="官方邮箱">
-                        <span>hbdxu@qq.com</span>
-                    </div>
-
-                    <!-- 关键词搜索 -->
-                    <div class="hb-search">
-                        <!-- 站外搜索 -->
-                        <form autocomplete="on" target="_blank" method="get" action="https://www.baidu.com/s">
-                            <input type="text" class="search" name="word" placeholder="想..."><input
-                                class="search-submit" type="submit" value=" ">
-                        </form>
-                    </div>
-
-                    <!-- hbdxu金的显示 -->
-                    <div class="hb-rmb">
-                        <img src="./images/hb-rmb.png" alt="hbdxu金">
-                        <span>hbdxu金：<span>31</span>
-                            <span><del>35</del></span></span>
-
-                    </div>
-
-
-                    <!-- 用户登录人口 -->
-                    <div class="hb-logOn">
-                        <img class="avatar" src="./images/hb-box-character1.jpg" alt="创始人dylan登录">
-                        <span class="logOn" title="暂时支持游客登录">登录</span>
-                    </div>
-
-                    <!-- 清除浮动 -->
-                    <div id="hb-clear"></div>
-                </div>
-            </div>
-
-            <!-- 导航 参考值：1600*52；-->
-            <div id="hb-nav">
-                <div id="hb-nav-main">
-
-                    <!-- logo -->
-                    <div class="hb-nav-logo">
-                        <img class="hb-hbdxu" src="./images/hb-hbdxu.png" alt="hbdxu的首页logo标志">
-                    </div>
-                    <!-- 页面导航 -->
-                    <!-- 5w2h -->
-                    <div id="hb-navs">
-                        <span id="hb" title="hbdxu具体是什么">hbdxu</span>
-                        <span id="who" title="hbdxu的人">什么人</span>
-                        <span id="why" title="hbdxu的理想国">为什么</span>
-                        <span id="where" title="hbdxu的出现地方">什么地方</span>
-                        <span id="when" title="hbdxu的时间线">什么时候</span>
-                        <span id="how" title="hbdxu可以做哪些事情">怎么样</span>
-                        <span id="howMuch" title="hbdxu的资产值">有多少</span>
-                    </div>
-                </div>
-            </div>
-
+            <!-- 居中 -->
+            <img src="./images/dylan.jpg" alt="dylan">
         </div>
 
-        <!-- zero 参考值：1600*204； -->
-        <div id="hb-zero">
-            <!-- 奖励   参考值： 1600*204； -->
-            <!-- 四个模块 -->
-            <div id="reward">
-                <div class="excitation1">
-                    <div class="reward-left">
-                        <!-- 模块插图 -->
-                        <img src="./images/hb-reward-excitation1.png" alt="个人奖" />
-                        <!-- 模块标题 -->
-                        <span class="hb-reward-h1">个人奖</span>
-                    </div>
-                    <div class="reward-right">
-                        <!-- 模块文字 -->
-                        <span>提前转正奖</span>
-                        <span>成果溢出奖</span><br />
-                        <span>没事奖一奖<span class="reward-color">+18</span></span><br />
-                        <span>奖励想一想<span class="reward-color">+31</span></span>
-                    </div>
-                </div>
-                <div class="excitation2">
-                    <div class="reward-left">
-                        <!-- 模块插图 -->
-                        <img src="./images/hb-reward-excitation2.png" alt="公司奖" />
-                        <!-- 模块标题 -->
-                        <span class="hb-reward-h1">公司奖</span>
-                    </div>
-                    <div class="reward-right">
-                        <!-- 模块文字 -->
-                        <span>荒地开发奖</span>
-                        <span>盈亏持零奖</span><br />
-                        <span>贡献系统奖</span>
-                        <span>步入轨道奖</span>
-                    </div>
-
-                </div>
-                <div class="excitation3">
-                    <div class="reward-left">
-                        <!-- 模块插图 -->
-                        <img src="./images/hb-reward-excitation3.png" alt="特殊奖" />
-                        <!-- 模块标题 -->
-                        <span class="hb-reward-h1">特殊奖</span>
-                    </div>
-                    <div class="reward-right">
-                        <!-- 模块文字 -->
-                        <span>非公司奖再奖</span>
-                        <span>非行业奖再奖</span><br />
-                        <span>非国家奖再奖</span>
-                        <span>非地球奖再奖</span>
-                    </div>
-
-                </div>
-                <div class="excitation4">
-                    <div class="reward-left">
-                        <!-- 模块插图 -->
-                        <img src="./images/hb-reward-excitation4.png" alt="无聊奖" />
-                        <!-- 模块标题 -->
-                        <span class="hb-reward-h1">无聊奖</span>
-                    </div>
-                    <div class="reward-right">
-                        <!-- 模块文字 -->
-                        <span>梦想实现奖</span>
-                        <span>日常问候奖</span><br />
-                        <span>最佳睡眠奖</span>
-                        <span>不满宣泄奖</span>
-                    </div>
-
-                </div>
-            </div>
-
+        <!-- 进化路线 -->
+        <div class="evolution">
+            <button id="hb-diode">二极管</button>
+            <button id="hb-ring">戒指</button>
+            <button id="hb-watch">手表</button>
+            <button id="hb-phone">手机</button>
+            <button id="hb-ipad">平板</button>
+            <button id="hb-computer">电脑</button>
+            <button id="hb-monitor">显示器</button>
         </div>
-
-        <!-- three 参考值：1600*744；-->
-        <div id="hb-three">
-            <!-- 单 背景图 -->
-            <div id="odd">
-                <!-- 上部分 参考值：1600*244；-->
-                <div id="hb-three-top">
-                    <!-- 左边小插图 -->
-                    <img class="leftImg" src="./images/hb-background-5.gif" alt="左边小插图">
-                    <!-- 标题 -->
-                    <span class="hb-title">
-                        <span class="colorBlack">hbdxu</span>
-                        <span class="colorGreen">成绩</span>
-                    </span>
-
-                    <!-- 清除浮动 -->
-                    <div id="hb-clear"></div>
-
-                    <!-- 文字内容 -->
-                    <p>
-                        <b>hbdxu</b>的一切成绩都将会在这里展示。
-                    </p>
-                </div>
-
-
-
-                <!-- 下部分 参考值：1600*500；-->
-                <div id="hb-three-botton">
-                    <!-- 固定3张轮播图 -->
-
-                    <!-- 左边 -->
-                    <div class="hb-three-left">
-
-                        <!-- 图片 -->
-                        <!-- <a href=""><img src="./images/hb-three-botton-1.png" alt="hbdxu球星计划"></a> 注释一-->
-                        <!-- <a href="./html/hb-three-left-4.html"><video src="./mp4/hb-three-botton-4.mp4" controls></video></a> 注释二-->
-                        <!-- <a href="./html/hb-three-left-5.html"><img src="./images/hb-three-botton-5.png" alt="夏侯惇"></a> -->
-                        <a href="./html/other/hb-three-left-6.html"><img src="./images/hb-three-botton-6.png"
-                                alt="俄洛伊"></a>
-                    </div>
-                    <!-- 右边 -->
-                    <div class="hb-three-right">
-                        <!-- 开始双引号 -->
-                        <img src="./images/hb-three-right-1.png" alt="开始双引号">
-                        <!-- 文字内容 -->
-                        <!-- <p title="hbdxu星球计划">hbdxu的星球资源已经冲出地球向外界发声，旨在让普通大众也有机会冲出地球寻找自己的那一片星空。 注释一</p> -->
-                        <!-- <p title="hbdxu星球计划">水晶无法提高掉宝率，我的暗刃可以。</p>  注释二-->
-                        <!-- <p title="夏侯惇">让我的眼睛见证今后的战斗！</p> -->
-                        <p>我们从不停歇。</p>
-                        <!-- 小小标题1 -->
-                        <!-- <p>hbdxu星球计划</p>  注释一-->
-                        <!-- <p>暗隐猎兽者</p>  注释二-->
-                        <!-- <p>夏侯惇</p> -->
-                        <p>俄洛伊</p>
-                        <!-- 小小副标题1 -->
-                        <!-- <p>全体人员</p>  注释一-->
-                        <!-- <p>hbdxu丨全点</p>  注释二-->
-                        <!-- <a href="./html/other/hb-three-left-5.html">hbdxu</a> -->
-                        <a href="./html/other/hb-three-left-6.html">全点丶阵容</a>
-                        <!-- 结束双引号 -->
-                        <img src="./images/hb-three-right-2.png" alt="结束双引号">
-                        <!-- 方向插图 -->
-                        <img class="hb-three-rightImg" src="./images/hb-three-botton-right.png" alt="轮播图向右">
-                    </div>
-
-                    <!-- 最下边 -->
-                    <div class="hb-three-box">
-                        <!-- 图片5轮播按钮 -->
-                        <img class="hb-three-white" src="./images/hb-three-box-6.png" alt="俄洛伊">
-                        <!-- 图片5轮播按钮 -->
-                        <img src="./images/hb-three-box-5.png" alt="夏侯惇">
-                        <!-- 图片4轮播按钮 -->
-                        <img src="./images/hb-three-box-4.png" alt="暗隐猎兽者">
-                        <!-- 图片1轮播按钮 -->
-                        <!-- <img src="./images/hb-three-box-1.png" alt="hbdxu球星计划"> -->
-                        <!-- 图片2轮播按钮 -->
-                        <!-- <img src="./images/hb-three-box-2.png" alt="hbdxu竞争计划"> 注释负一-->
-                        <!-- 图片3轮播按钮 -->
-                        <!-- <img src="./images/hb-three-box-3.png" alt="hbdxu战略布局"> 注释负二 -->
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- footer 参考值：1600*50；-->
-        <div id="hb-footer">
-
-            <!-- 底部层 参考值：1600*50；-->
-            <div id="hb-bottom">
-                <div>
-                    <span>
-                        <!-- Copyright  -->
-                        <!-- <b style="font-family:'Arial Narrow'; font-size:20px;">&copy;</b> 2022&#8211;2023 hbdxu.
-                        All Rights
-                        Reserved -->
-                        <!-- Copyright  -->
-                        <b style="font-family:'Arial Narrow'; font-size:20px;">&copy;</b> 2022&#8211;2024 hbdxu.
-                        All Rights
-                        Reserved
-                    </span>
-                </div>
-                <div>
-                    <span>支持</span>
-                    <img src="./images/Firefox.png" alt="Firefox">
-                    <img src="./images/Google Chrome.png" alt="Google Chrome">
-                    <img src="./images/Microsoft Edge.png" alt="Microsoft Edge">
-                    <span>不支持</span> <img src="./images/Internet Explorer.png" alt="Internet Explorer">
-
-                </div>
-                <div>
-                    <!-- 文字内容2 -->
-                    <span>隐私与政策</span>
-
-                    <!-- 文字内容3 -->
-                    <span>使用条款及条件</span>
-
-                    <!-- 分隔线 -->
-                    <span style="margin: 0 10px; ">|</span>
-
-                    <!-- 小logo1 -->
-                    <img src="./images/hb-bottom-1.png" alt="官方微信">
-
-
-                    <!-- 小logo2 -->
-                    <img src="./images/hb-bottom-2.png" alt="官方微博">
-
-                </div>
-            </div>
-
-            <!-- 清除浮动 -->
-            <div id="hb-clear"></div>
-
-        </div>
-
 
     </div>
-    <script src="./js/jquery-3.6.1.min.js"></script>
+    <div id="characters"></div>
 
-    <script src="./js/hbdxu.js"></script>
-    <script src="./js/hb-header.js"></script>
-    <script src="./js/hb-zero.js"></script>
-    <script src="./js/hb-three.js"></script>
-    <script src="./js/hb-footer.js"></script>
-    <script defer="defer" src="./js/defer.js"></script>
     <script>
-        // 网站统计
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?4593da50502b0a3368fcb9c546871c20";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+        // 1.用户点击按钮，用户想让hbdxuAi选择的进化路线
+
+        // 2.获取点击事件，并且把相应的值赋值给hbdxuAi
+
+        // 2.1 获取点击事件
+        var diodeOn = document.getElementById("hb-diode"),
+            ringOn = document.getElementById("hb-ring"),
+            watchOn = document.getElementById("hb-watch"),
+            phoneOn = document.getElementById("hb-phone"),
+            ipadOn = document.getElementById("hb-ipad"),
+            computerOn = document.getElementById("hb-computer"),
+            monitorOn = document.getElementById("hb-monitor"),
+            charactersText = document.getElementById("characters");
+
+        // 点击函数onclickEvolution，参数为evolution
+        function onclickEvolution(evolution) {
+            evolution.onclick = function () {
+                console.log("hbdxuAi=" + this.innerText);
+                charactersText.innerHTML = "进化中......";
+            }
+        }
+
+        // evolution传递给onclickEvolution函数，得出hbdxuAi的进化路线
+        onclickEvolution(diodeOn);
+        onclickEvolution(ringOn);
+        onclickEvolution(watchOn);
+        onclickEvolution(phoneOn);
+        onclickEvolution(ipadOn);
+        onclickEvolution(computerOn);
+        onclickEvolution(monitorOn);
     </script>
 </body>
 
