@@ -29,6 +29,7 @@
             background-image: url(./images/hb-logo.png);
             background-size: 100% 100%;
             margin: 0 auto;
+            color: white;
         }
 
         .picture {
@@ -83,36 +84,202 @@
     <div id="characters"></div>
 
     <script>
-        // 1.用户点击按钮，用户想让hbdxuAi选择的进化路线
+        // 1.用户点击按钮，用户想让Ai选择的进化路线
 
         // 2.获取点击事件，并且把相应的值赋值给hbdxuAi
 
-        // 2.1 获取点击事件
-        var diodeOn = document.getElementById("hb-diode"),
-            ringOn = document.getElementById("hb-ring"),
-            watchOn = document.getElementById("hb-watch"),
-            phoneOn = document.getElementById("hb-phone"),
-            ipadOn = document.getElementById("hb-ipad"),
-            computerOn = document.getElementById("hb-computer"),
-            monitorOn = document.getElementById("hb-monitor"),
-            charactersText = document.getElementById("characters");
+        // 3.先获取屏幕尺寸
+        let windowWidth = window.innerWidth;
+        let windowHeight = window.innerHeight;
 
-        // 点击函数onclickEvolution，参数为evolution
-        function onclickEvolution(evolution) {
-            evolution.onclick = function () {
-                console.log("hbdxuAi=" + this.innerText);
-                charactersText.innerHTML = "进化中......";
+        // 按照尺寸显示对应的内容
+        let hbdxu = document.getElementById("hbdxu");
+        let bodyHbdxu = document.getElementsByTagName("body")[0];
+
+        let diode = 1;
+        let ring = [2, 10];
+        let watch = [[11, 41], [11, 45]];
+        let phone = [[42, 800], [46, 2000]];//[[42, 800]]到[[810, 3000]]范围误差属于误差区间，[[46, 2000]]到[[1400, 2100]]范围误差属于误差区间
+        let ipad = [[810, 3000], [1400, 2100]];//[[810, 3000]]到[[3100, 4000]]范围误差属于误差区间，[[1400, 2100]]到[[2200, 3000]]范围误差属于误差区间
+        let computer = [[3100, 4000], [2200, 3000]];//[[3100, 4000]]到[[4100, 10000]]范围误差属于误差区间，[[2200, 3000]]到[[3100, 5000]]范围误差属于误差区间
+        let monitor = [[4100, 10000], [3100, 5000]];
+        if (windowHeight == diode) {
+            // 3.1.二极管，只显示一个按钮，有发过时长。条件：尺寸高度为1的时候,点亮二极管；
+            // 表现层：
+            // 3.1.1 只有一个按钮
+            // 3.1.2 从浅色变成深色 #a5f87f 浅; #14911c 深
+            // 3.1.3 （略）点击进入进化路线 进化中......
+            // >>>浏览器显示不能实时显示效果，可以延迟显示效果
+            // diode
+            hbdxu.innerHTML = `<button id="hb-diode">二极管</button>`;
+            hbdxu.style.background = "#a5f87f";
+            let diodeOn = document.getElementById("hb-diode");
+            diodeOn.onclick = function () {
+                console.log("Ai=" + this.innerText);
+                console.log("点亮二极管，二极管有发过时长。");
+                hbdxu.style.background = "#14911c";
             }
-        }
+        } else if (windowHeight >= ring[0] && windowHeight <= ring[1]) {
+            // 3.2.戒指，只显示一个按钮，可伸缩、可转动、可按、固定发光时长。条件：尺寸高度为[2,10]的时候,点亮二戒指；
+            // 表现层：
+            // 3.2.1 只有一个按钮
+            // 3.2.2 从浅色变成深色 #a5f87f 浅; #14911c 深
+            // 3.2.3 （略）点击进入进化路线 进化中......
+            // >>>浏览器显示不能实时显示效果，可以延迟显示效果
+            // ring
+            hbdxu.innerHTML = `<button id="hb-ring">戒指</button>`;
+            hbdxu.style.background = "#a5f87f";
+            let ringOn = document.getElementById("hb-ring");
+            ringOn.onclick = function () {
+                console.log("Ai=" + this.innerText);
+                hbdxu.style.background = "#14911c";
+                console.log("点亮戒指，戒指可伸缩、可转动、可按、固定发光时长。");
+            }
+        } else if (windowHeight >= watch[1][0] && windowHeight <= watch[1][1]) {
+            // 3.3.手表，只显示一个按钮，可按键、可转动。条件：尺寸宽度（略）为[11, 41],高度为 [11, 45]的时候,点亮手表；
+            // 表现层：
+            // 3.3.1 只有一个按钮
+            // 3.3.2 从浅色变成深色 #a5f87f 浅; #14911c 深
+            // 3.3.3 点击进入进化路线 进化中......
+            // watch
+            hbdxu.innerHTML = `<button id="hb-watch">手表</button><span id="characters"></span>`;
+            hbdxu.style.background = "#a5f87f";
+            let charactersText = document.getElementById("characters");
+            let watchOn = document.getElementById("hb-watch");
+            watchOn.onclick = function () {
+                console.log("Ai=" + this.innerText);
+                charactersText.innerHTML = "进化中......";
+                console.log("点亮手表，手表可按键、可转动。");
+                hbdxu.style.background = "#14911c";
+            }
+        } else if (windowWidth >= phone[0][0] && windowWidth <= phone[0][1]) {
+            // 3.4.手机，只显示一个按钮，可触屏。条件：尺寸宽度为[42, 800],高度（略）为[46, 2000]的时候,点亮手机；
+            // 表现层：
+            // 3.4.1 只有一个按钮
+            // 3.4.2 从浅色变成深色 #a5f87f 浅; #14911c 深
+            // 3.4.3 点击进入进化路线 进化中......
+            // phone
+            bodyHbdxu.innerHTML = `
+            <div id="hbdxu">
+            <div class="picture">
 
-        // evolution传递给onclickEvolution函数，得出hbdxuAi的进化路线
-        onclickEvolution(diodeOn);
-        onclickEvolution(ringOn);
-        onclickEvolution(watchOn);
-        onclickEvolution(phoneOn);
-        onclickEvolution(ipadOn);
-        onclickEvolution(computerOn);
-        onclickEvolution(monitorOn);
+            <!-- 居中 -->
+            <img src="./images/dylan.jpg" alt="dylan">
+            </div>
+            <!-- 进化路线 -->
+            <div class="evolution">
+            <button id="hb-phone">手机</button>
+            </div>
+            </div>
+            <div id="characters"></div>`;
+            hbdxu.style.background = "#a5f87f";
+            let charactersText = document.getElementById("characters");
+            let phone = document.getElementById("hb-phone");
+            phone.style.marginLeft="80px";
+            phone.onclick = function () {
+                console.log("Ai=" + this.innerText);
+                charactersText.innerHTML = "进化中......";
+                console.log("点亮手机，手机可触屏。");
+                hbdxu.style.backgroundImage = "url(./images/hb-logo.png)";
+            }
+        } else if (windowWidth >= ipad[0][0] && windowWidth <= ipad[0][1]) {
+            // 3.5.平板，只显示一个按钮，可触屏、可连按键盘等外设。条件：尺寸宽度为[810, 3000],高度（略）为 [1400, 2100]的时候,点亮平板；
+            // 表现层：
+            // 3.5.1 只有一个按钮
+            // 3.5.2 从浅色变成深色 #a5f87f 浅; #14911c 深
+            // 3.5.3 点击进入进化路线 进化中......
+            // ipad
+            bodyHbdxu.innerHTML = `
+            <div id="hbdxu">
+            <div class="picture">
+
+            <!-- 居中 -->
+            <img src="./images/dylan.jpg" alt="dylan">
+            </div>
+            <!-- 进化路线 -->
+            <div class="evolution">
+            <button id="hb-ipad">平板</button>
+            </div>
+            </div>
+            <div id="characters"></div>`;
+            hbdxu.style.background = "#a5f87f";
+            let charactersText = document.getElementById("characters");
+            let ipad = document.getElementById("hb-ipad");
+            ipad.style.marginLeft="80px";
+            ipad.onclick = function () {
+                console.log("Ai=" + this.innerText);
+                charactersText.innerHTML = "进化中......";
+                console.log("点亮平板，平板可触屏、可连接键盘等外设。");
+                hbdxu.style.backgroundImage = "url(./images/hb-logo.png)";
+                console.log("***不足之处，还在进化***");
+            }
+        } else if (windowWidth >= computer[0][0] && windowWidth <= computer[0][1]) {
+            // 3.6.电脑，只显示一个按钮，有键盘、鼠标等外设。条件：尺寸宽度为[3100, 4000],高度（略）为[2200, 3000]的时候,点亮电脑；
+            // 表现层：
+            // 3.6.1 只有一个按钮
+            // 3.6.2 从浅色变成深色 #a5f87f 浅; #14911c 深
+            // 3.6.3 点击进入进化路线 进化中......
+            // computer
+            bodyHbdxu.innerHTML = `
+            <div id="hbdxu">
+            <div class="picture">
+
+            <!-- 居中 -->
+            <img src="./images/dylan.jpg" alt="dylan">
+            </div>
+            <!-- 进化路线 -->
+            <div class="evolution">
+            <button id="hb-computer">电脑</button>
+            </div>
+            </div>
+            <div id="characters"></div>`;
+            hbdxu.style.background = "#a5f87f";
+            let charactersText = document.getElementById("characters");
+            let computer = document.getElementById("hb-computer");
+            computer.style.marginLeft="80px";
+            computer.onclick = function () {
+                console.log("Ai=" + this.innerText);
+                charactersText.innerHTML = "进化中......";
+                console.log("点亮电脑，电脑可触屏、可连接键盘等外设。");
+                hbdxu.style.backgroundImage = "url(./images/hb-logo.png)";
+                console.log("***不足之处，还在进化***");
+            }
+        } else if (windowWidth >= monitor[0][0] && windowWidth <= monitor[0][1]) {
+            // 3.7.显示器，只显示一个按钮，有按键等外设。条件：尺寸宽度为[4100, 10000],高度（略）为 [3100, 5000]的时候,点亮显示器；
+            // 表现层：
+            // 3.7.1 只有一个按钮
+            // 3.7.2 从浅色变成深色 #a5f87f 浅; #14911c 深
+            // 3.7.3 点击进入进化路线 进化中......
+            // monitor
+            bodyHbdxu.innerHTML = `
+            <div id="hbdxu">
+            <div class="picture">
+
+            <!-- 居中 -->
+            <img src="./images/dylan.jpg" alt="dylan">
+            </div>
+            <!-- 进化路线 -->
+            <div class="evolution">
+            <button id="hb-monitor">显示器</button>
+            </div>
+            </div>
+            <div id="characters"></div>`;
+            hbdxu.style.background = "#a5f87f";
+            let charactersText = document.getElementById("characters");
+            let monitor = document.getElementById("hb-monitor");
+            monitor.style.marginLeft="80px";
+            monitor.onclick = function () {
+                console.log("Ai=" + this.innerText);
+                charactersText.innerHTML = "进化中......";
+                console.log("点亮显示器，显示器有按键等外设。");
+                hbdxu.style.backgroundImage = "url(./images/hb-logo.png)";
+                console.log("***不足之处，还在进化***");
+            }
+        } else {
+            hbdxu.innerHTML = `<div id="characters">进化中......</div>`;
+            hbdxu.style.background = "#14911c";
+            console.log("进化中......");
+        }
     </script>
 </body>
 
